@@ -50,3 +50,32 @@ bool search(int value, int values[], int n)
     return false;
 }
 
+/**
+ * Sorts array of n values.
+ */
+void sort(int values[], int n)
+{
+    // TODO: implement an O(n^2) sorting algorithm
+    
+    int k = 0;
+    for(int j = 0; j < n; j++)
+    {
+        int min = values[j];
+        for(int i = k+1; i < n; i++)
+        {
+            if(min > values[i])
+            {
+                int temp = values[i];
+                values[i] = values[j];
+                values[j] = temp;
+            }
+        
+        }
+        
+        k++;
+            
+    }
+    return;
+}
+
+
